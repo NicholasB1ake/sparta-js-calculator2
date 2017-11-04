@@ -18,18 +18,18 @@ if (calc ==='b'){
 
 }
 function add(number1, number2){
-  return (number1) + (number2)
+  return parseInt((number1)) + parseInt((number2))
 }
 
  function multiply(number1, number2){
-   return number1 * number2
+   return parseInt(number1) * parseInt(number2)
 }
 
 function divide(number1, number2){
-  return number1 / number2
+  return parseInt(number1) / parseInt(number2)
 }
 function minus(number1,number2){
-  return number1 - number2
+  return (number1) - (number2)
 }
 
 if (calc === 'a'){
@@ -39,10 +39,19 @@ if (calc === 'a'){
       let pow2 = prompt ('what is your second number?')
     alert(power(pow1,pow2));
     }
+    if (advanced === 'b'){
+      let square = prompt("What number would you like the square root of?");
+      alert(sqrt(square));
+    }else{
+      alert('Please enter a valid option')
+    }
   }
 
 
 function power(pow1, pow2){
   return Math.pow(pow1, pow2);
+}
 
+function sqrt(square){
+  return Math.sqrt(square)
 }
