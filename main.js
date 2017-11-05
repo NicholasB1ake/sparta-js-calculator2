@@ -1,4 +1,4 @@
-let calc = prompt('Welcome to the calculator app, hit B for the basic fucntions. A for advanced calculator');
+let calc = prompt('Welcome to the calculator app, hit B for the basic fucntions. A for advanced calculator. C for BMI functions');
 
 if (calc ==='b'){
     let number1 = prompt ('what is your first number?');
@@ -29,7 +29,7 @@ function divide(number1, number2){
   return parseInt(number1) / parseInt(number2)
 }
 function minus(number1,number2){
-  return (number1) - (number2)
+  return parseInt(number1) - parseInt(number2)
 }
 
 if (calc === 'a'){
@@ -55,3 +55,17 @@ function power(pow1, pow2){
 function sqrt(square){
   return Math.sqrt(square)
 }
+
+if(calc === 'c'){
+  let metric = prompt("A for metric calculation or B for imperial.")
+    if(metric === 'a'){
+      let height = prompt('Please enter your height in Centremeters');
+      let weight = prompt('Please enter your weight in kilograms');
+      prompt(bmiMetric(height, weight));
+ }
+}
+
+
+// function bmiMetric(height, weight){
+//   return height / weight
+// }
